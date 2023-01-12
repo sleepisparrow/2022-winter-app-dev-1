@@ -58,6 +58,11 @@ public class login_activity extends AppCompatActivity {
         }
 
         saveUserData(tmp);
+
+        if (!pw.equals(tmp.getPw())) {
+            finishWrongLogin();
+            return;
+        }
         if (tmp.is_admin)
             finishAdminUserLogin();
         else
