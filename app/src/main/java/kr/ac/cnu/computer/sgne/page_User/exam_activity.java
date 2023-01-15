@@ -1,4 +1,4 @@
-package kr.ac.cnu.computer.sgne;
+package kr.ac.cnu.computer.sgne.page_User;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +7,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import kr.ac.cnu.computer.sgne.R;
 
 public class exam_activity extends AppCompatActivity {
 

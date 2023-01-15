@@ -1,4 +1,4 @@
-package kr.ac.cnu.computer.sgne;
+package kr.ac.cnu.computer.sgne.page_Admin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import kr.ac.cnu.computer.sgne.R;
 
 public class management_user_activity extends AppCompatActivity {
 

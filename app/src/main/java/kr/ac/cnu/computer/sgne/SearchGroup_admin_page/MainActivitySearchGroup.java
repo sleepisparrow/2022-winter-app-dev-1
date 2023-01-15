@@ -1,16 +1,20 @@
 package kr.ac.cnu.computer.sgne.SearchGroup_admin_page;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import kr.ac.cnu.computer.sgne.R;
+import kr.ac.cnu.computer.sgne.admin_groupranking.GrouprankingActivity;
 
 public class MainActivitySearchGroup extends AppCompatActivity {
 
@@ -46,7 +50,12 @@ public class MainActivitySearchGroup extends AppCompatActivity {
         /*
             이 자리에서 기본 정보들 수정할 것
          */
-
+        check_rank_btn.setOnClickListener(v -> {
+            // TODO: group_id 수정
+            Intent intent = new Intent(getApplicationContext(), GrouprankingActivity.class);
+            intent.putExtra("group_id", 1);
+            startActivity(intent);
+        });
 
         // 회원가입 대기중 버튼
         signup_btn = findViewById(R.id.user_group3);

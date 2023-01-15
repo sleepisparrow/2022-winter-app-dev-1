@@ -1,7 +1,7 @@
 package kr.ac.cnu.computer.sgne.quiz_list;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import kr.ac.cnu.computer.sgne.R;
+import kr.ac.cnu.computer.sgne.page_User.exam_activity;
 
 public class TestScrollMain extends AppCompatActivity {
 
@@ -56,11 +57,11 @@ public class TestScrollMain extends AppCompatActivity {
         데이터베이스에서 testName과 userName을 불러와서 setText 해주는 부분 구현 필요
         */
 
-        startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //버튼 클릭시 문제 장면으로 넘어가는 기능 구현해야 함
-            }
+        startButton.setOnClickListener(v -> {
+            // TODO: problem set 수정
+            Intent intent = new Intent(getApplicationContext(), exam_activity.class);
+            intent.putExtra("problem_set", 1);
+            startActivity(intent);
         });
     }
 }

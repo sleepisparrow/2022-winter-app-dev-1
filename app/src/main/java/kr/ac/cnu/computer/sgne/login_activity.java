@@ -110,8 +110,8 @@ public class login_activity extends AppCompatActivity {
         id = sharedPreferences.getString("id", null);
         pw = sharedPreferences.getString("password", null);
 
-        if (id != null && pw != null)
-           login();
+//        if (id != null && pw != null)
+//           login();
     }
 
     /**
