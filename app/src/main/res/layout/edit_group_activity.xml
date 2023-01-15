@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".edit_group_activity">
+
+    <TextView
+        android:id="@+id/그룹이름"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="그룹이름 : "
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/그룹이름입력"
+        app:layout_constraintEnd_toStartOf="@+id/그룹이름입력" />
+
+    <TextView
+        android:id="@+id/첫수업날짜"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="첫 수업 날짜 : "
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/날짜입력"
+        app:layout_constraintEnd_toStartOf="@+id/날짜입력" />
+
+    <TextView
+        android:id="@+id/그룹정보"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="그룹 정보 : "
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/그룹정보입력"
+        app:layout_constraintEnd_toStartOf="@+id/그룹정보입력" />
+
+    <TextView
+        android:id="@+id/그룹인원"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="그룹인원 : "
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/그룹인원입력"
+        app:layout_constraintEnd_toStartOf="@+id/그룹인원입력" />
+
+    <EditText
+        android:id="@+id/그룹이름입력"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="175dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="(수정 전 이름)"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/그룹인원입력"
+        app:layout_constraintStart_toStartOf="@+id/그룹인원입력"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/날짜입력"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="(수정 전 수업 날짜)"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/그룹이름입력"
+        app:layout_constraintTop_toBottomOf="@+id/그룹이름입력" />
+
+    <EditText
+        android:id="@+id/그룹인원입력"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="47dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="(수정 전 그룹 인원)"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/날짜입력" />
+
+    <EditText
+        android:id="@+id/그룹정보입력"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="(수정 전 그룹 정보)"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/그룹인원입력"
+        app:layout_constraintTop_toBottomOf="@+id/그룹인원입력" />
+
+    <Button
+        android:id="@+id/취소"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="취소"
+        android:background="@drawable/button"
+        android:textColor="#ffffff"
+        app:layout_constraintBaseline_toBaselineOf="@+id/수정완료"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="@+id/첫수업날짜" />
+
+    <Button
+        android:id="@+id/수정완료"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:text="수정완료"
+        android:textColor="#ffffff"
+        android:background="@drawable/button"
+        app:layout_constraintEnd_toEndOf="@+id/cardView4"
+        app:layout_constraintStart_toStartOf="@+id/cardView4"
+        app:layout_constraintTop_toBottomOf="@+id/그룹정보입력" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="69dp"
+        app:cardBackgroundColor="#31B01C"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/그룹이름"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView3">
+
+        <TextView
+            android:id="@+id/분반수정"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="분반 수정"
+            android:textSize="18sp"
+            android:textColor="#ffffff" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="9dp"
+        app:cardBackgroundColor="#31B01C"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/원장"
+            android:layout_width="108dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="원장"
+            android:textColor="#ffffff" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="69dp"
+        app:cardBackgroundColor="#31B01C"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/회원가입수락대기중"
+            android:layout_width="108dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="회원가입 수락 대기중"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="12dp"
+        app:cardBackgroundColor="#31B01C"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView4"
+        app:layout_constraintEnd_toStartOf="@+id/cardView4"
+        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintTop_toTopOf="@+id/cardView4"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/이수호"
+            android:layout_width="108dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="이수호"
+            android:textColor="#ffffff" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
