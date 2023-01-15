@@ -1,6 +1,4 @@
-package com.example.mangement_user;
-
-import androidx.appcompat.app.AppCompatActivity;
+package kr.ac.cnu.computer.sgne;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class management_user_activity extends AppCompatActivity {
 
