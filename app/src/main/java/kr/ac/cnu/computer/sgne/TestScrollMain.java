@@ -1,10 +1,10 @@
-package kr.ac.cnu.computer.quizapp;
+package kr.ac.cnu.computer.sgne;
 
-import android.view.View;
+import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class TestScrollMain extends AppCompatActivity {
 
     /*나중에 db에서 사용자 정보랑 퀴즈 정보 불러오는 것 구현해야 함*/
-    ArrayList<Quiz> list = new ArrayList();
+    ArrayList<Quiz> list = new ArrayList<>();
     String userName;
     String testName;
 
@@ -53,11 +53,8 @@ public class TestScrollMain extends AppCompatActivity {
         데이터베이스에서 testName과 userName을 불러와서 setText 해주는 부분 구현 필요
         */
 
-        startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //버튼 클릭시 문제 장면으로 넘어가는 기능 구현해야 함
-            }
+        startButton.setOnClickListener(v -> {
+            //버튼 클릭시 문제 장면으로 넘어가는 기능 구현해야 함
         });
     }
 }

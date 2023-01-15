@@ -1,4 +1,4 @@
-package kr.ac.cnu.computer.quizcreater;
+package kr.ac.cnu.computer.sgne;
 
 import android.content.Context;
 import android.util.AttributeSet;

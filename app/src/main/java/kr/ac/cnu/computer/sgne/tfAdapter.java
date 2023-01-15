@@ -1,4 +1,4 @@
-package kr.ac.cnu.computer.quizcreater;
+package kr.ac.cnu.computer.sgne;
 
 import android.view.LayoutInflater;
 import android.view.View;

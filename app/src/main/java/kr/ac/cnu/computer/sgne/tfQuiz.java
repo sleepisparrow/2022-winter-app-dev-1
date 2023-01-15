@@ -1,4 +1,4 @@
-package kr.ac.cnu.computer.quizcreater;
+package kr.ac.cnu.computer.sgne;
 
 public class tfQuiz {
     String tfName;
