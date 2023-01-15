@@ -1,4 +1,4 @@
-package kr.ac.cnu.computer.quizcreater;
+package kr.ac.cnu.computer.sgne.quiz_creator;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import org.jetbrains.annotations.NotNull;
+import kr.ac.cnu.computer.sgne.R;
 
 import java.util.ArrayList;
 

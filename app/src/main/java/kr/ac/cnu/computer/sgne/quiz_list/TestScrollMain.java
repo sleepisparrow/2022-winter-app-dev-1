@@ -1,4 +1,4 @@
-package kr.ac.cnu.computer.quizapp;
+package kr.ac.cnu.computer.sgne.quiz_list;
 
 import android.view.View;
 import android.widget.Button;
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import kr.ac.cnu.computer.sgne.R;
 
 import java.util.ArrayList;
 

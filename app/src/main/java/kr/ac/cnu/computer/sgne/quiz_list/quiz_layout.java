@@ -1,4 +1,4 @@
-package kr.ac.cnu.computer.quizapp;
+package kr.ac.cnu.computer.sgne.quiz_list;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
+import kr.ac.cnu.computer.sgne.R;
 
 public class quiz_layout extends LinearLayout {
     /*
