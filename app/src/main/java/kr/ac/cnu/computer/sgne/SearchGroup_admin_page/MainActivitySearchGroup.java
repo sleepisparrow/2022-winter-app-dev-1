@@ -1,4 +1,4 @@
-package com.example.searchgroup;
+package kr.ac.cnu.computer.sgne.SearchGroup_admin_page;
 
 import android.content.Context;
 import android.view.View;
@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import kr.ac.cnu.computer.sgne.R;
 
 public class MainActivitySearchGroup extends AppCompatActivity {
 

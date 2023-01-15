@@ -1,4 +1,4 @@
-package com.example.eidtworkbook;
+package kr.ac.cnu.computer.sgne.EditWorkbook_admin_page;
 
 import java.util.ArrayList;
 import java.util.List;

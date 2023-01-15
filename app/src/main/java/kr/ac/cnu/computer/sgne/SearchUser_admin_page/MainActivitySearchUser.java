@@ -1,4 +1,4 @@
-package com.example.searchuser;
+package kr.ac.cnu.computer.sgne.SearchUser_admin_page;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import kr.ac.cnu.computer.sgne.R;
 
 public class MainActivitySearchUser extends AppCompatActivity {
     RecyclerView recyclerView;

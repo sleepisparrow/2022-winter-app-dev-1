@@ -1,4 +1,4 @@
-package com.example.searchgroup;
+package kr.ac.cnu.computer.sgne.SearchGroup_admin_page;
 
 public class WorkbookSearchGroup {
     String workBookName;

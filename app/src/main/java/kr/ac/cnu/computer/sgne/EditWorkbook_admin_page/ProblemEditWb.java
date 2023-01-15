@@ -1,4 +1,4 @@
-package com.example.eidtworkbook;
+package kr.ac.cnu.computer.sgne.EditWorkbook_admin_page;
 
 public class ProblemEditWb {
     private String title;

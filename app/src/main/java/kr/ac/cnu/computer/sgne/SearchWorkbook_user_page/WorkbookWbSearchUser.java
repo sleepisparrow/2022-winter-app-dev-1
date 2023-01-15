@@ -1,4 +1,4 @@
-package com.example.workbookserch_user;
+package kr.ac.cnu.computer.sgne.SearchWorkbook_user_page;
 
 public class WorkbookWbSearchUser {
     private String workBookName, personNum, totalNum, date, score;

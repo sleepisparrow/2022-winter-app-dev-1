@@ -1,4 +1,4 @@
-package com.example.workbookserch_user;
+package kr.ac.cnu.computer.sgne.SearchWorkbook_user_page;
 
 import android.content.Context;
 import android.view.View;
@@ -11,6 +11,7 @@ import android.os.Bundle;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import kr.ac.cnu.computer.sgne.R;
 
 public class MainActivityWbSerachUser extends AppCompatActivity {
     RecyclerView apReView, unReView;

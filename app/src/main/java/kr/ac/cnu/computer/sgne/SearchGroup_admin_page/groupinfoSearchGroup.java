@@ -1,8 +1,8 @@
-package com.example.searchgroup;
+package kr.ac.cnu.computer.sgne.SearchGroup_admin_page;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-
+import kr.ac.cnu.computer.sgne.R;
 
 // 랭킹확인 버튼을 눌렀을 때 화면 연결 코드 추가
 

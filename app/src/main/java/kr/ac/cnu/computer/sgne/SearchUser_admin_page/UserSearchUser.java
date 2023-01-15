@@ -1,4 +1,4 @@
-package com.example.searchuser;
+package kr.ac.cnu.computer.sgne.SearchUser_admin_page;
 
 public class UserSearchUser {
     private String name;

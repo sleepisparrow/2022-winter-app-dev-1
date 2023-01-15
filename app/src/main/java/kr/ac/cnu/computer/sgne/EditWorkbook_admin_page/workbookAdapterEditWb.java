@@ -1,4 +1,4 @@
-package com.example.eidtworkbook;
+package kr.ac.cnu.computer.sgne.EditWorkbook_admin_page;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import org.jetbrains.annotations.NotNull;
+import kr.ac.cnu.computer.sgne.R;
 
 import java.util.ArrayList;
 import java.util.List;
