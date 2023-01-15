@@ -1,6 +1,7 @@
 package kr.ac.cnu.computer.sgne.main_page;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import kr.ac.cnu.computer.sgne.R;
 import kr.ac.cnu.computer.sgne.User;
 import kr.ac.cnu.computer.sgne.login_test_data;
+import kr.ac.cnu.computer.sgne.quiz_list.TestScrollMain;
 
 public class main_activity extends AppCompatActivity {
 
@@ -73,12 +75,20 @@ public class main_activity extends AppCompatActivity {
         untested_adapter.setList(main_test_data.unTested);
         untested_adapter.setItemListener((view, pos) -> {
             problem_set problemSet = untested_adapter.list.get(pos);
-            Toast.makeText(this, problemSet.test_name, Toast.LENGTH_SHORT).show();
+            
+            // TODO: id 수정하기
+            Intent intent = new Intent(getApplicationContext(), TestScrollMain.class);
+            intent.putExtra("problem_set_id", 1);
+            startActivity(intent);
         });
         tested_adapter.setList(main_test_data.tested);
         tested_adapter.setItemListener((view, pos) -> {
             problem_set problemSet = tested_adapter.list.get(pos);
-            Toast.makeText(this, problemSet.test_name, Toast.LENGTH_SHORT).show();
+
+            // TODO: id 수정하기
+            Intent intent = new Intent(getApplicationContext(), TestScrollMain.class);
+            intent.putExtra("problem_set_id", 1);
+            startActivity(intent);
         });
 
         untested_adapter.notifyDataSetChanged();

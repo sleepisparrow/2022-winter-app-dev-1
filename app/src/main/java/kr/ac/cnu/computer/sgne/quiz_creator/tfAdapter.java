@@ -1,15 +1,19 @@
-package kr.ac.cnu.computer.quizcreater;
+package kr.ac.cnu.computer.sgne.quiz_creator;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+
+import kr.ac.cnu.computer.sgne.R;
 
 public class tfAdapter extends RecyclerView.Adapter<tfAdapter.ViewHolder> {
     static int count = 1;

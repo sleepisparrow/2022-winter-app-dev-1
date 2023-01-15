@@ -1,14 +1,18 @@
-package kr.ac.cnu.computer.quizapp;
+package kr.ac.cnu.computer.sgne.quiz_list;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+
+import kr.ac.cnu.computer.sgne.R;
 
 public class QuizAdapter extends RecyclerView.Adapter<QuizAdapter.ViewHolder>{
     ArrayList<Quiz> items = new ArrayList<>();

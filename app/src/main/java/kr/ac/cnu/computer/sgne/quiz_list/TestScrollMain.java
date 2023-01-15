@@ -1,14 +1,17 @@
-package kr.ac.cnu.computer.quizapp;
+package kr.ac.cnu.computer.sgne.quiz_list;
 
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import kr.ac.cnu.computer.sgne.R;
 
 public class TestScrollMain extends AppCompatActivity {
 
