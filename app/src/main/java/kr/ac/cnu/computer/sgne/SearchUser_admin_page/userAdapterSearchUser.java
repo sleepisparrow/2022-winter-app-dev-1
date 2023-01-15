@@ -4,17 +4,28 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import org.jetbrains.annotations.NotNull;
-import kr.ac.cnu.computer.sgne.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class userAdapterSearchUser extends RecyclerView.Adapter<ViewHolderSearchUser> {
+import kr.ac.cnu.computer.sgne.R;
+
+public class userAdapterSearchUser extends RecyclerView.Adapter<userAdapterSearchUser.ViewHolderSearchUser> {
 
     private List<UserSearchUser> list;
+    public CheckUserInfoClickListener listener;
+
+    public void setOnClickListener(CheckUserInfoClickListener listener) {
+        this.listener = listener;
+    }
 
     public userAdapterSearchUser() {
         list = new ArrayList<>();
@@ -52,6 +63,30 @@ public class userAdapterSearchUser extends RecyclerView.Adapter<ViewHolderSearch
     }
     public UserSearchUser getListData(int index) {
         return list.get(index);
+    }
+
+
+
+    class ViewHolderSearchUser extends RecyclerView.ViewHolder {
+
+        public TextView userName, userGroup, firstClass, userID;
+        public Button checkUserInfo;
+
+        public ViewHolderSearchUser(Context context, View itemView) {
+            super(itemView);
+
+            userName = itemView.findViewById(R.id.userName);
+            userGroup = itemView.findViewById(R.id.userGroup);
+            firstClass = itemView.findViewById(R.id.firstClass);
+            userID = itemView.findViewById(R.id.userID);
+
+            checkUserInfo = itemView.findViewById(R.id.checkUserInfo);
+            checkUserInfo.setOnClickListener(view -> {
+                listener.onClick(view, getAdapterPosition());
+                Toast.makeText(context, userName.getText().toString() + " 클릭", Toast.LENGTH_SHORT).show();
+            });
+
+        }
     }
 }
 

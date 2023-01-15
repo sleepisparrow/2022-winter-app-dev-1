@@ -1,13 +1,13 @@
 package kr.ac.cnu.computer.sgne.admin_groupadd;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import kr.ac.cnu.computer.sgne.R;
 
@@ -16,7 +16,7 @@ public class GroupAddActivity extends AppCompatActivity {
     EditText firstLecture;
     EditText groupMember;
     EditText groupInfo;
-    Button groupAdd;
+    Button groupAdd, cancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,7 @@ public class GroupAddActivity extends AppCompatActivity {
                 rv_1.setAdapter(adapter);
             }
         });
-
+        cancel = findViewById(R.id.cancel);
+        cancel.setOnClickListener(v -> finish());
     }
 }
