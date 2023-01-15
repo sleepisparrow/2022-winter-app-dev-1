@@ -1,12 +1,12 @@
-package com.example.exam;
-
-import androidx.appcompat.app.AppCompatActivity;
+package kr.ac.cnu.computer.sgne;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class exam_activity extends AppCompatActivity {
 
