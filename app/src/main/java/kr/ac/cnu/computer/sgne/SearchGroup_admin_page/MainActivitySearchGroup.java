@@ -1,6 +1,7 @@
 package kr.ac.cnu.computer.sgne.SearchGroup_admin_page;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,7 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.searchgroup.EditWorkbook_admin_page.MainActivityEditWb;
 import kr.ac.cnu.computer.sgne.R;
+
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+import static androidx.core.content.ContextCompat.startActivity;
 
 public class MainActivitySearchGroup extends AppCompatActivity {
 
@@ -131,7 +136,13 @@ class ViewHolderSearchGroup extends RecyclerView.ViewHolder {
         editWorkBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 이 자리엔 클릭한 문제집을 화면에 띄우는 코드 작성 필요
+                Intent intent = new Intent(context.getApplicationContext(), MainActivityEditWb.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("문제집이름", studybookName.getText().toString());
+                bundle.putString("응시인원", personNum.getText().toString());
+                bundle.putString("정원", totalNum.getText().toString());
+
+                startActivity(context.getApplicationContext(), intent.addFlags(FLAG_ACTIVITY_NEW_TASK), bundle);
 
 
                 // 아래에 토스트 메시지를 띄우는 코드는 제대로 된 작동을 하는지 테스트를 위한 코드임.
