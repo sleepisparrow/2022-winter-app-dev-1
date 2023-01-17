@@ -1,4 +1,4 @@
-package kr.ac.cnu.computer.sgne;
+package kr.ac.cnu.computer.sgne.page_Admin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import kr.ac.cnu.computer.sgne.R;
 
 public class edit_group_activity extends AppCompatActivity {
 
