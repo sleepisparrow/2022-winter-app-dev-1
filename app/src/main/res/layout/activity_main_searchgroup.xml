@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:background="@color/white"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".Main.MainActivitySearchGroup">
     <EditText
             android:layout_width="257dp"
             android:layout_height="49dp"
@@ -176,7 +176,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp" android:id="@+id/view3" android:background="@color/black"/>
         <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_width="383dp"
                 android:layout_height="444dp"
                 android:id="@+id/workbook_recyclerview"/>
     </LinearLayout>
