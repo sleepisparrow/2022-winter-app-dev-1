@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_activity">
+
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginTop="25dp"
+
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/light_green"
+        android:text="LOGIN"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_ids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+
+        app:layout_constraintTop_toBottomOf="@id/login_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="15sp"
+            android:text="ID: " />
+
+        <EditText
+            android:id="@+id/input_id"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+
+            android:singleLine="true"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_pws"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_ids"
+
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="15sp"
+            android:text="PW: "/>
+
+        <EditText
+            android:id="@+id/input_pw"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+
+            android:inputType="textPassword"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <TextView
+        android:id="@+id/wrong_input_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_pws"
+
+        android:visibility="invisible"
+
+        android:text="아이디 혹은 패스워드의 입력이 잘못되었습니다."
+        android:textColor="#f00"/>
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_pws"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/login_button"
+
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/light_green">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:text="로그인"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/register_button"
+
+            android:layout_marginTop="15dp"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/light_green">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:text="회원가입"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

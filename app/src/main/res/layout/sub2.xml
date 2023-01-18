@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" android:orientation="vertical">
+
+    <TextView
+            android:text="Explanation: \n
+According to highlighted sentences, we can figure out that the whole paragraph is telling you how electrical fish is different than normal fish in some propositions such as the ability of detecting electricity, or the cell structure. "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="20dp"
+            android:id="@+id/explanation"
+    />
+</LinearLayout>
