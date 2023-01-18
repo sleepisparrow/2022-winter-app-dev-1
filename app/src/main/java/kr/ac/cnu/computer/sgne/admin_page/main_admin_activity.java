@@ -1,6 +1,7 @@
 package kr.ac.cnu.computer.sgne.admin_page;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -20,8 +21,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 import kr.ac.cnu.computer.sgne.R;
+import kr.ac.cnu.computer.sgne.SearchGroup_admin_page.MainActivitySearchGroup;
+import kr.ac.cnu.computer.sgne.SearchUser_admin_page.MainActivitySearchUser;
 import kr.ac.cnu.computer.sgne.User;
+import kr.ac.cnu.computer.sgne.admin_groupadd.GroupAddActivity;
+import kr.ac.cnu.computer.sgne.admin_groupranking.GrouprankingActivity;
 import kr.ac.cnu.computer.sgne.login_test_data;
+import kr.ac.cnu.computer.sgne.quiz_creator.quizCreatorMain;
 
 public class main_admin_activity extends AppCompatActivity {
     private User user;
@@ -129,13 +135,21 @@ public class main_admin_activity extends AppCompatActivity {
             @Override
             public void on_ranking_check_button_click(View itemView, int pos) {
                 Group group = adapter.list.get(pos);
-                Toast.makeText(main_admin_activity.this, group.name + "랭킹 확인 눌림", Toast.LENGTH_SHORT).show();
+
+                // TODO: group_id 수정
+                Intent intent = new Intent(getApplicationContext(), GrouprankingActivity.class);
+                intent.putExtra("group_id", 1);
+                startActivity(intent);
             }
 
             @Override
             public void on_manage_group_button_click(View itemView, int pos) {
                 Group group = adapter.list.get(pos);
-                Toast.makeText(main_admin_activity.this, group.name + "그룹 관리 눌림", Toast.LENGTH_SHORT).show();
+
+                // TODO: group_id 수정
+                Intent intent = new Intent(getApplicationContext(), MainActivitySearchGroup.class);
+                intent.putExtra("group_id", 1);
+                startActivity(intent);
             }
         });
 
@@ -149,15 +163,18 @@ public class main_admin_activity extends AppCompatActivity {
      */
     private void init_buttons() {
         findViewById(R.id.create_problems).setOnClickListener(v -> {
-            Toast.makeText(this, "문제집 제작 눌림", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), quizCreatorMain.class);
+            startActivity(intent);
         });
 
         findViewById(R.id.manage_user).setOnClickListener(v -> {
-            Toast.makeText(this, "유저 정보 관리 눌림", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), MainActivitySearchUser.class);
+            startActivity(intent);
         });
 
         findViewById(R.id.add_group).setOnClickListener(v -> {
-            Toast.makeText(this, "분반 추가 눌림", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), GroupAddActivity.class);
+            startActivity(intent);
         });
     }
 }

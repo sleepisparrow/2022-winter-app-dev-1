@@ -1,13 +1,16 @@
-package kr.ac.cnu.computer.solutionpage;
+package kr.ac.cnu.computer.sgne.solution_page;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
+
+import kr.ac.cnu.computer.sgne.R;
 
 public class SolutionPageMain extends AppCompatActivity {
     ScrollView scrollView;

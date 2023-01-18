@@ -111,7 +111,7 @@ public class login_activity extends AppCompatActivity {
         pw = sharedPreferences.getString("password", null);
 
 //        if (id != null && pw != null)
-//            login();
+//           login();
     }
 
     /**
@@ -167,7 +167,7 @@ public class login_activity extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-            if (start > 0)
+            if (count > 0)
                 target.setTrue();
             else
                 target.setFalse();

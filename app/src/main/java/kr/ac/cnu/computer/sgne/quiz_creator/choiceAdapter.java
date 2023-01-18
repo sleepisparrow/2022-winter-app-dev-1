@@ -1,15 +1,19 @@
-package kr.ac.cnu.computer.quizcreater;
+package kr.ac.cnu.computer.sgne.quiz_creator;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+
+import kr.ac.cnu.computer.sgne.R;
 
 public class choiceAdapter extends RecyclerView.Adapter<choiceAdapter.ViewHolder>{
     static int count = 1;
@@ -18,7 +22,6 @@ public class choiceAdapter extends RecyclerView.Adapter<choiceAdapter.ViewHolder
 
 
     @NonNull
-    @NotNull
     @Override
     public choiceAdapter.ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup viewGroup, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());

@@ -1,4 +1,4 @@
-package kr.ac.cnu.computer.quizapp;
+package kr.ac.cnu.computer.sgne.quiz_list;
 
 public class Quiz {
     int total_questions;

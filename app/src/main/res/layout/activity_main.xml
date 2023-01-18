@@ -139,7 +139,7 @@
                 android:layout_height="0dp"
 
                 app:cardCornerRadius="10dp"
-                app:cardBackgroundColor="@color/background"
+                app:cardBackgroundColor="@color/light_brown"
                 app:strokeColor="@color/light_green"
                 app:strokeWidth="1dp"
 
@@ -170,7 +170,7 @@
                 android:layout_height="0dp"
 
                 app:cardCornerRadius="10dp"
-                app:cardBackgroundColor="@color/background"
+                app:cardBackgroundColor="@color/light_brown"
                 app:strokeColor="@color/light_green"
                 app:strokeWidth="1dp"
 
@@ -191,7 +191,7 @@
         android:layout_height="match_parent"
 
         android:layout_gravity="end"
-        android:background="@color/background">
+        android:background="@color/light_brown">
         <TextView
             android:id="@+id/navigation_bar_item1"
             android:layout_width="match_parent"

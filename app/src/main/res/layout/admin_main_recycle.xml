@@ -37,6 +37,7 @@
 
             android:layout_marginStart="5dp"
 
+            app:cardBackgroundColor="@color/light_brown"
             app:cardCornerRadius="10dp"
             app:strokeWidth="2dp"
             app:strokeColor="@color/light_green">
@@ -70,6 +71,7 @@
 
             android:layout_marginHorizontal="5dp"
 
+            app:cardBackgroundColor="@color/light_brown"
             app:cardCornerRadius="10dp"
             app:strokeWidth="2dp"
             app:strokeColor="@color/light_green">
