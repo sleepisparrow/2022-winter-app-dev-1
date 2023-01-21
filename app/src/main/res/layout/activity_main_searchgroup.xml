@@ -177,7 +177,7 @@
                 android:layout_height="1dp" android:id="@+id/view3" android:background="@color/black"/>
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_gravity="center"
-                android:layout_width="383dp"
+                android:layout_width="373dp"
                 android:layout_height="444dp"
                 android:id="@+id/workbook_recyclerview"/>
     </LinearLayout>

@@ -101,25 +101,26 @@ public class MainActivitySearchGroup extends AppCompatActivity {
 
     public void StudentManagement(View view){
         /*
-            학생 관리 액티비티로 연결시켜주는 코드 작성
+           //Todo 학생 관리 액티비티로 연결시켜주는 코드 작성
          */
     }
 
     public void DeletGroup(View view) {
         /*
-            그룹을 DB에서 삭제하는 코드 작성
+           //Todo 그룹을 DB에서 삭제하는 코드 작성
          */
     }
 
     public void EditGroup(View view) {
         /*
-            그룹을 편집하는 액티비티로 연결시켜주는 코드 작성
+           //Todo 그룹을 편집하는 액티비티로 연결시켜주는 코드 작성
          */
     }
 
     public void Singup(View view) {
+
         /*
-            회원가입 수락 액티비티로 연결시켜주는 코드 작성
+           //Todo 회원가입 수락 액티비티로 연결시켜주는 코드 작성
          */
     }
 }
