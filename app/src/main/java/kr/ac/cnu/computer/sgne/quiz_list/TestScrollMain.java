@@ -5,9 +5,16 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -18,15 +25,17 @@ public class TestScrollMain extends AppCompatActivity {
 
     /*나중에 db에서 사용자 정보랑 퀴즈 정보 불러오는 것 구현해야 함*/
     ArrayList<Quiz> list = new ArrayList();
-    String userName;
-    String testName;
+    String uName;
+    String quizName;
+    int totalQuizNum = 10;
+    int scoredQuizNum = 5;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = database.getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_app);
-        TextView userName = findViewById(R.id.userName);
-        TextView testName = findViewById(R.id.testName);
         Button startButton = findViewById(R.id.startButton);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
@@ -34,13 +43,37 @@ public class TestScrollMain extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         QuizAdapter adapter = new QuizAdapter();
 
-        for(Quiz item : list){
-            adapter.addItem(item);
-        }
+        //DB에서 문제 이름과 총 문제의 수를 가져옴
+        databaseReference.child("workbook").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Together_group_list group = snapshot.getValue(Together_group_list.class);
 
+                quizName = group.getQuizName();
+                totalQuizNum = group.getTotalQuizNum();
+            }
 
-        for(int i=0; i<10; i++){
-            adapter.addItem(new Quiz(10, 6, 1));
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                //Nothing
+            }
+        });
+
+        //DB에서 맞은 문제 수를 가져옴
+        databaseReference.child("workbook").child("workbook_user").child("scoredQuizNum").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                scoredQuizNum = (int) snapshot.getValue(Integer.class);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        for(int i=1; i<=3; i++){
+            adapter.addItem(new Quiz(totalQuizNum, scoredQuizNum, i));
         }
         /*
 
