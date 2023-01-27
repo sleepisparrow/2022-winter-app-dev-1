@@ -1,8 +1,10 @@
 package kr.ac.cnu.computer.sgne;
 
 import android.os.Build;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.database.*;
 import kr.ac.cnu.computer.sgne.admin_page.Group; // Todo 나중에 이거 말고 다른 Group class 만들어지면 다른 곳으로 import 바꿔주세요.
 import org.checkerframework.checker.units.qual.C;
@@ -14,7 +16,7 @@ import java.util.*;
 /*
 *   이 클래스는 User 라는 클래스가 있어서 만든 임시 user 클래스입니다.
 *   추후에 user라는 클래스를 대신할 예정이며, 그 후에는 이 클래스를 User 로 수정바랍니당.
-*   Todo 유저가 문제집을 풀이하면, 유저의 DB에 추가할 뿐만 아니라 당장 여기 클래스의 workbooksList에 추가하고, noSolvedWorkbookList에선 해당 문제집을 삭제해야 합니다.
+*   Todo 유저가 문제집을 풀이하면, 유저의 DB에 추가해야 합니다.
 */
 public class UserDbClass {
     private FirebaseDatabase mDatabase;
@@ -33,7 +35,7 @@ public class UserDbClass {
 
     public UserDbClass(String name, String id, String pw, Group group, boolean isAdmin, boolean certified) {
         mDatabase = FirebaseDatabase.getInstance();
-        mReference = mDatabase.getReference("Group");
+        initDatabase();
 
         username = name;
         this.id = id;
@@ -130,6 +132,7 @@ public class UserDbClass {
         } catch (NullPointerException nullPointerException) {
             return false;
         } catch (Exception e){ // 널포인터이셉션이 맞다면 이 catch문은 지워주세요.
+            e.printStackTrace();
             return false;
         }
 
@@ -138,10 +141,9 @@ public class UserDbClass {
 
 
     /*
-        유저가 푼 문제집인지 확인하는 메소드 입니다.
-        문제집(Workbook) 이라는 class가 만들어지면 해결될 문제입니다.
+        유저가 푼 문제집인지 확인하는 메서드
+        외부 클래스에서 사용할 메서드.
      */
-
     public boolean checkSolvedWorkbook(Workbook workbook){
         // 유저의 푼 문제집 list에서 문제집의 고유 코드를 탐색한다.
         // 이분탐색 사용할 것.
@@ -179,6 +181,7 @@ public class UserDbClass {
         return -1; // 탐색 실패
     }
 
+    // DB가 구축되지 않으면 사용할 수 없음. Exception이 뜸.
     private void getWorkbookFromDatabase(){
         // 지금 이 클래스에 저장된 id로 데이터베이스에서 문제집의 정보를 가져와 workbookList와 noSolvedWorkbookList에 담을 것이다.
         // 한 번만 쓰일 것 같지만 혹시 모르니 만들어두는 메소드.
@@ -209,6 +212,7 @@ public class UserDbClass {
         });
     }
 
+    //  checkSolvedWorkbook이 true를 반환한다면 이 메서드를 쓰면 됨.
     public void addSolvedWorkbook(Workbook workbook){
         solvedWorkbooksList.add(workbook);
         addSolvedWorkbookCode(workbook.getCode());
@@ -223,7 +227,7 @@ public class UserDbClass {
             solvedWorkbookCodeList.sort(new Comparator<Long>() {
                 @Override
                 public int compare(Long a, Long b) {
-                    return (a>b) ? 1 : (a==b) ? 0 : -1;
+                    return (a > b) ? 1 : ((a == b) ? 0 : -1);
                 }
             });
         }
