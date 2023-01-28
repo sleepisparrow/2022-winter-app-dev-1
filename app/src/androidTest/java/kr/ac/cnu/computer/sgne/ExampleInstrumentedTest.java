@@ -10,6 +10,8 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 /**
  * Instrumented test, which will execute on an Android device.
  *
@@ -22,5 +24,15 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("kr.ac.cnu.computer.sgne", appContext.getPackageName());
+    }
+
+    public void test(){
+        DB_workbook wb = new DB_workbook();
+        wb.setWorkbookName("테스트(23.01.28) : 워크북 네임");
+
+        ArrayList<DB_workbookUser> testList = new ArrayList<>();
+        wb.setUser_list(testList);;
+
+        DB_workbook.putDB_workbook(wb);
     }
 }
