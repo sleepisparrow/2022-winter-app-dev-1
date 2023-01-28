@@ -6,21 +6,20 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import kr.ac.cnu.computer.sgne.quiz_list.Quiz;
 
 public class DB_workbook {
 
     // 파이어베이스 데이터베이스 연동
-    private static FirebaseDatabase database = FirebaseDatabase.getInstance();
-    private static DatabaseReference databaseReference = database.getReference();
-
+    final private static DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
     String workbookName;
     int personNum;
     int totalPersonNum;
     int totalProblemNum;
 //    ArrayList<DB_quiz> quiz_list = new ArrayList<DB_quiz>();
-    ArrayList<DB_workbookUser> user_list = new ArrayList<DB_workbookUser>();
+    List<DB_workbookUser> user_list = new ArrayList<DB_workbookUser>();
 
     public String getWorkbookName() {
         return workbookName;
@@ -62,7 +61,7 @@ public class DB_workbook {
 //        this.quiz_list = quiz_list;
 //    }
 
-    public ArrayList<DB_workbookUser> getUser_list() {
+    public List<DB_workbookUser> getUser_list() {
         return user_list;
     }
 
