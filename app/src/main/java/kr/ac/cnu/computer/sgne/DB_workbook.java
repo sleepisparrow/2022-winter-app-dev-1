@@ -81,21 +81,8 @@ public class DB_workbook {
         databaseReference.child("WorkBook").child(wb.workbookName).setValue(wb);
     }
 
-    public static DatabaseReference getDatabaseReference() {
-        return databaseReference;
-    }
 
-    ValueEventListener postListener = new ValueEventListener() {
-        @Override
-        public void onDataChange(@NonNull DataSnapshot snapshot) {
-            DB_workbook post = snapshot.getValue(DB_workbook.class);
-        }
 
-        @Override
-        public void onCancelled(@NonNull DatabaseError error) {
-            // 객체를 가져올 때 실패하면 호출이 됨
-        }
-    };
     /**
      *
      * 랭킹, 평균값, 오답률 계산
