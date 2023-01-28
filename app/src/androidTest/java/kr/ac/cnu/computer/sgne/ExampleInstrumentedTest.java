@@ -29,17 +29,25 @@ public class ExampleInstrumentedTest {
         assertEquals("kr.ac.cnu.computer.sgne", appContext.getPackageName());
     }
 
+    @Test
     public void test(){
         DB_workbook wb = new DB_workbook();
-        wb.setWorkbookName("테스트(23.01.28) : 워크북 네임");
-
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("이수호 테스트");
-        myRef.setValue("연결된건가");
-
+        wb.setWorkbookName("Testing_workbookName");
         ArrayList<DB_workbookUser> testList = new ArrayList<>();
-        wb.setUser_list(testList);;
+        DB_workbookUser wbu0 = new DB_workbookUser("이수호", "22.01.27", "56", "false", "100");
+        DB_workbookUser wbu1 = new DB_workbookUser("배연우", "22.01.28", "60", "true", "3");
+        DB_workbookUser wbu2 = new DB_workbookUser("김민재", "22.01.21", "58", "false", "2");
+        DB_workbookUser wbu3 = new DB_workbookUser("박종현", "22.02.02", "0", "true", "1");
 
-        DB_workbook.putDB_workbook(wb);
+        testList.add(wbu0);
+        testList.add(wbu1);
+        testList.add(wbu2);
+        testList.add(wbu3);
+        wb.setUser_list(testList);
+        DB_workbook.putDB_workbook_obj(wb);
+
+        try {
+            Thread.sleep(3000);
+        }catch(InterruptedException e){}
     }
 }
