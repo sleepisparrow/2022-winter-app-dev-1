@@ -2,10 +2,16 @@ package kr.ac.cnu.computer.sgne;
 
 import android.service.notification.NotificationListenerService;
 
+import androidx.annotation.NonNull;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import kr.ac.cnu.computer.sgne.quiz_list.Quiz;
@@ -13,12 +19,14 @@ import kr.ac.cnu.computer.sgne.quiz_list.Quiz;
 public class DB_workbook {
 
     // 파이어베이스 데이터베이스 연동
-    final private static DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+    private static FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private static DatabaseReference databaseReference = database.getReference();
+
     String workbookName;
     int personNum;
     int totalPersonNum;
     int totalProblemNum;
-//    ArrayList<DB_quiz> quiz_list = new ArrayList<DB_quiz>();
+    List<DB_quiz> quiz_list = new ArrayList<DB_quiz>();
     List<DB_workbookUser> user_list = new ArrayList<DB_workbookUser>();
 
     public String getWorkbookName() {
@@ -53,13 +61,13 @@ public class DB_workbook {
         this.totalProblemNum = totalProblemNum;
     }
 
-//    public ArrayList<DB_quiz> getQuiz_list() {
-//        return quiz_list;
-//    }
+    public List<DB_quiz> getQuiz_list() {
+        return quiz_list;
+    }
 
-//    public void setQuiz_list(ArrayList<DB_quiz> quiz_list) {
-//        this.quiz_list = quiz_list;
-//    }
+    public void setQuiz_list(ArrayList<DB_quiz> quiz_list) {
+        this.quiz_list = quiz_list;
+    }
 
     public List<DB_workbookUser> getUser_list() {
         return user_list;
@@ -69,8 +77,28 @@ public class DB_workbook {
         this.user_list = user_list;
     }
 
-    static void putDB_workbook(DB_workbook wb) {
+    static void putDB_workbook_obj(DB_workbook wb) {
         databaseReference.child("WorkBook").child(wb.workbookName).setValue(wb);
-        databaseReference.child("WorkBook").child(wb.workbookName).child("UserList").setValue(wb.getUser_list());
     }
+
+    public static DatabaseReference getDatabaseReference() {
+        return databaseReference;
+    }
+
+    ValueEventListener postListener = new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot snapshot) {
+            DB_workbook post = snapshot.getValue(DB_workbook.class);
+        }
+
+        @Override
+        public void onCancelled(@NonNull DatabaseError error) {
+            // 객체를 가져올 때 실패하면 호출이 됨
+        }
+    };
+    /**
+     *
+     * 랭킹, 평균값, 오답률 계산
+     *
+     */
 }
