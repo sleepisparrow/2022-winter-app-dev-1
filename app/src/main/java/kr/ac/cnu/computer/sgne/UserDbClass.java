@@ -86,7 +86,7 @@ public class UserDbClass {
             }
         };
 
-        mReference.addValueEventListener((ValueEventListener) mchild);
+        mReference.addChildEventListener(mchild);
     }
 
     // 공식 문서에 있던거 일단 따라 만든거. 어따 쓰는지는 잘 모르겠음.
