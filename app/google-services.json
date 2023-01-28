@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "1044627308802",
+    "firebase_url": "https://snge-2023-default-rtdb.firebaseio.com",
+    "project_id": "snge-2023",
+    "storage_bucket": "snge-2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044627308802:android:39fe9211286fb2dd09021b",
+        "android_client_info": {
+          "package_name": "kr.ac.cnu.computer.quizapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044627308802-17dukj4deob358p7d3no6j7lv58r3hva.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGiQT4hh833H6SdupO1d1XoksgMmlQQsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044627308802-17dukj4deob358p7d3no6j7lv58r3hva.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044627308802:android:8b05d11b5abc617509021b",
+        "android_client_info": {
+          "package_name": "kr.ac.cnu.computer.quizapp.quiz_list"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044627308802-17dukj4deob358p7d3no6j7lv58r3hva.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGiQT4hh833H6SdupO1d1XoksgMmlQQsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044627308802-17dukj4deob358p7d3no6j7lv58r3hva.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044627308802:android:8dce838efd855b4e09021b",
+        "android_client_info": {
+          "package_name": "kr.ac.cnu.computer.sgne"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044627308802-17dukj4deob358p7d3no6j7lv58r3hva.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGiQT4hh833H6SdupO1d1XoksgMmlQQsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044627308802-17dukj4deob358p7d3no6j7lv58r3hva.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
