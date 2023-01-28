@@ -2,6 +2,7 @@ package kr.ac.cnu.computer.sgne;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -10,8 +11,11 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -49,5 +53,19 @@ public class ExampleInstrumentedTest {
         try {
             Thread.sleep(3000);
         }catch(InterruptedException e){}
+    }
+
+    public void selectTest(){
+        ValueEventListener postListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                DB_workbook wb = snapshot.getValue(DB_workbook.class);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // 객체를 가져올 때 실패하면 호출이 됨
+            }
+        };
     }
 }
