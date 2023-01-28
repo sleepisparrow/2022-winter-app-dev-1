@@ -10,6 +10,9 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 /**
@@ -29,6 +32,10 @@ public class ExampleInstrumentedTest {
     public void test(){
         DB_workbook wb = new DB_workbook();
         wb.setWorkbookName("테스트(23.01.28) : 워크북 네임");
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("이수호 테스트");
+        myRef.setValue("연결된건가");
 
         ArrayList<DB_workbookUser> testList = new ArrayList<>();
         wb.setUser_list(testList);;
