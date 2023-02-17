@@ -151,6 +151,7 @@ public class login_activity extends AppCompatActivity {
             Toast.makeText(this, "아이디 혹은 비밀번호를 입력하지 않으셨습니다.", Toast.LENGTH_LONG).show();
         });
     }
+
     /**
      * id, pw editText가 사용하는 TextWatcher.
      * 둘 다 차있을 경우 활성화, 비활성화도 이 친구가 한다.
